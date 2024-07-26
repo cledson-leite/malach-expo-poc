@@ -1,10 +1,12 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, Image, TouchableOpacity, Linking } from 'react-native'
 import React from 'react'
 import Colors from '@/constants/Colors';
 import { Link } from 'expo-router';
 
 const Page = () => {
-  const openLink = () => {}
+  const openLink = () => {
+    Linking.openURL('https://github.com/cledson-leite')
+  }
   return (
     <View style={styles.container}>
       <Image source={require('@/assets/images/welcome.png')} style={styles.welcome} />
@@ -48,7 +50,7 @@ const styles = StyleSheet.create({
   description: {
     fontSize: 14,
     textAlign: 'center',
-    marginBottom: 30,
+    marginVertical: 30,
     color: Colors.gray
   },
   link: {
